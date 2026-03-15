@@ -15,15 +15,25 @@ function createCalculator(){
     const calc=document.createElement("div");
     calc.className="calc";
     calc.id="calculator";
+    //calc.style.textAlign="center";
+    calc.style.border="2px solid black";
+    calc.style.height="277px";
+    calc.style.width="180px";
+
+
 //ekta display
-    const display=document.createElement("span");
+    const display=document.createElement("div");
     display.className="calcDisplay";
     display.id="Calc_Display";
     display.textContent=0;
+    display.style.border="2px solid black";
+    display.style.height="50px";
+    display.style.fontSize="3rem";
 
     const btn=document.createElement("div");
     btn.className = "calc-buttons";
     btn.id = "calcButtons";
+
 
     calc.appendChild(display);
     calc.appendChild(btn);
@@ -51,6 +61,11 @@ function createCalculator(){
         b.name = "btn_" + buttons[i];
         b.className="BUTTON";
         b.style.backgroundColor="yellow";
+        b.style.border="2px solid black";
+        b.style.height="45px";
+        b.style.width="45px";
+        b.style.fontSize="2rem";
+    
 
 
         btn.appendChild(b);
@@ -121,6 +136,8 @@ function operate(a,b,op){
     
 
 }
+
+openBtn.remove();
 }
         
     
