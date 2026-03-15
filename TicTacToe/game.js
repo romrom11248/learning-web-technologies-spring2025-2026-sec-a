@@ -45,6 +45,16 @@ function createGame(){
             background-color: rgb(238, 221, 144);
         }
 
+
+        .mark{ animation: pop 0.3s ease-out; }
+        @keyframes pop {
+        0% { transform: scale(0.5); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+        }
+
+
+
         #Container{
             display: grid;
             grid-template-columns: repeat(3,80px);
@@ -107,6 +117,7 @@ function startGame(){
 
 function turn(){
     const position = this.getAttribute("cellIndex");
+    cells[position].classList.add("mark");
 
     if(boardState[position] !== "" || !gameActive){
         return;
