@@ -17,7 +17,7 @@ function calculate(){
     }
         let x=Quantity*unitPrice;
         display.value="Total price "+ x+" tk";
-        
+        //display.value.style.fontSize="1.4rem";
         if(x>1000){
             alert("Customer is eligible for gift coupon!");
         }
@@ -26,3 +26,4 @@ function calculate(){
 }
 
 quantity.addEventListener("input",calculate);
+calculate();

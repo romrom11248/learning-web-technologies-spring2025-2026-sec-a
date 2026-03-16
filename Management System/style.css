@@ -1,6 +1,7 @@
 body{
     margin: 20px;
     align-items: center;
+    padding: 50px;
 }
 
 #container {
@@ -8,11 +9,12 @@ body{
     padding: 30px;
     border-radius: 8px;
     width: 350px;
+    align-items: center;
 }
 #display{
     border: 2px solid black;
    
-    margin: 40px;
+    margin: 20px;
     padding: 30px;
 }
 label {
@@ -20,4 +22,12 @@ label {
    font-size: 1.4rem;
    background-color: rgb(126, 203, 137);
    width: 130px;
+}
+
+input {
+    width: 120px;
+    padding: 20px;
+    border: 2px solid #211e1e;
+    border-radius: 4px;
+   align-items: center;
 }
