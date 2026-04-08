@@ -8,6 +8,7 @@ btn.addEventListener('click', function(){
     if(username == ""){
         msg.innerHTML = "please type username first!";
         msg.style.color = 'red';
+        
     }else{
         let head = document.getElementsByTagName('h1')[0];
         head.innerHTML = username;
