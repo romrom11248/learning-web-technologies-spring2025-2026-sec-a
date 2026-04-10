@@ -16,4 +16,12 @@ echo "Height= 10 m <br>";
 echo "Area: {$a} m^2 <br>";
 echo "Paimeter: {$p} m";
 
+
+for ($i = 1; $i <= 3; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo "*";
+    }
+    echo "<br>";
+}
+
 ?>
