@@ -1,5 +1,3 @@
-
-
 <?php
 $username = "";
 
@@ -8,7 +6,8 @@ if(isset($_POST['submit'])){
 
     if($username == ""){
         echo "Null username<br>";
-
+    } else {
+        echo "User name = " . $username . "<br>";
     }
 }
 ?>
