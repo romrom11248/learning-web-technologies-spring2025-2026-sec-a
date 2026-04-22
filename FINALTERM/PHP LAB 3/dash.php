@@ -87,11 +87,105 @@
       </nav>
     </header>
     <main>
-     <div style="display:incline-block;">
-        <b> Account</b>
-    
+        
+     <div style="display: inline-block; width: 400px;>
+
+        <strong> Account</strong>
+        <hr>
+        <a href="dash.php"><u>Dashboard</u></a>    
+        <br>
+
+        <a href="view.php">View Profile</a>    
+        <br>
+        
+        <a href="edit.php">Edit Profile</a>    
+        <br>
+
+        <a href="changePP.php">Change Profile Picture</a>    
+        <br>
+
+        <a href="changePass.php">Change Password</a>    
+        <br>
+
+        <a href="logout.php">Logout</a>
+        <br>
 
      </div>
+
+     <div style="display: inline-block; width: 800px; height: 800px;>
+        <fieldset>
+            <legend>EDIT PROFILE</legend>
+           
+            <br>
+    <form enctype="multipart/form-data"  action="regcheck.php" method="post">
+       
+                <label>Name</label>
+                
+                    <input type="text" name="name">
+                    <br>
+                    <br>
+
+                <hr>
+
+                <label>Email</label>
+                 <input type="text" name="email" >
+                    <span class="info-icon" title="Hint: name@domain.com">i</span>
+                    <br>
+                    <br>
+                    <hr>
+                    
+                    <label>User Name</label>
+               
+                    <input type="text" name="username">
+                    <br>
+                    <br>
+               <hr>
+
+
+                <label>Password</label>
+                
+                    <input type="password" name="password">
+                    <br>
+                    <br>
+               <hr>
+
+
+                <label>Confirm Password</label>
+                
+                    <input type="password" name="confirmpassword">
+                    <br>
+                    <br>
+                <hr>
+
+           
+               
+                   <label name="g">Gender</label>
+                    <input type="radio" name="gender"  value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                  
+                    <br>
+                    <hr>
+            <!-- Date of Birth -->
+            <label name="dob">Date of Birth:</label>
+                
+                    <input type="text" name="dob_day" size="2" maxlength="2" > /
+                    <input type="text" name="dob_month" size="2" maxlength="2" > /
+                    <input type="text" name="dob_year" size="4" maxlength="4"> (dd/mm/yyyy)
+                   
+                   <br>
+                   <br>
+                   <hr>
+
+                   <input type="submit" value="Submit">
+                   <input type="reset" value="Reset">
+                   <br><br>
+
+    </form>
+        </fieldset>
+     </div>
+
+
     </main>
 
     <footer>
