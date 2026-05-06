@@ -76,7 +76,7 @@
   <header>
      
         <span><b>X</b> Company</span>
-      </a>
+
 
       <nav>
         <a href="home.php"><u>Home</u></a>
@@ -87,37 +87,11 @@
       </nav>
     </header>
     <main>
-        
-     <div style="display: inline-block; width: 400px;>
-
-        <strong> Account</strong>
-        <hr>
-        <a href="dash.php"><u>Dashboard</u></a>    
-        <br>
-
-        <a href="view.php">View Profile</a>    
-        <br>
-        
-        <a href="edit.php">Edit Profile</a>    
-        <br>
-
-        <a href="changePP.php">Change Profile Picture</a>    
-        <br>
-
-        <a href="changePass.php">Change Password</a>    
-        <br>
-
-        <a href="logout.php">Logout</a>
-        <br>
-
-     </div>
-
-     <div style="display: inline-block; width: 800px; height: 800px;>
-        <fieldset>
-            <legend>EDIT PROFILE</legend>
-           
+    <form enctype="multipart/form-data"  action="../controller/regcheck.php" method="post">
+        <fieldset style="width:400px;">
+            <legend>REGISTRATION</legend>
             <br>
-    <form enctype="multipart/form-data"  action="regcheck.php" method="post">
+    
        
                 <label>Name</label>
                 
@@ -158,34 +132,32 @@
                 <hr>
 
            
-               
-                   <label name="g">Gender</label>
+                <fieldset>
+                    <legend name="g">Gender</legend>
                     <input type="radio" name="gender"  value="Male"> Male
                     <input type="radio" name="gender" value="Female"> Female
                     <input type="radio" name="gender" value="Other"> Other
-                  
+                    </fieldset>
                     <br>
-                    <hr>
             <!-- Date of Birth -->
-            <label name="dob">Date of Birth:</label>
+            <fieldset>
+            <legend name="dob">Date of Birth</legend>
                 
                     <input type="text" name="dob_day" size="2" maxlength="2" > /
                     <input type="text" name="dob_month" size="2" maxlength="2" > /
                     <input type="text" name="dob_year" size="4" maxlength="4"> (dd/mm/yyyy)
-                   
+                    </fieldset>
                    <br>
                    <br>
                    <hr>
 
-                   <input type="submit" value="Submit">
-                   <input type="reset" value="Reset">
+                   <input type="submit" name="submit" value="Submit">
+                   <input type="reset" name="reset" value="Reset">
                    <br><br>
 
+
+    </fieldset>
     </form>
-        </fieldset>
-     </div>
-
-
     </main>
 
     <footer>

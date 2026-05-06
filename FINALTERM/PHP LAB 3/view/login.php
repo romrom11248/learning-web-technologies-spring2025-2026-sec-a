@@ -87,23 +87,36 @@
       </nav>
     </header>
     <main>
-    <fieldset>
-        <legend>FORGOT PASSWORD</legend>
-        <label>Enter Email: </label>
+    <form enctype="multipart/form-data"  action="../controller/logincheck.php" method="post">
+      <fieldset>
+        <legend>LOGIN</legend>
+        
+        <label>User Name</label>
                 
-                <input type="mail" name="mail">
+                <input type="text" name="name">
                 <br>
-               
-              
+                <br>
+                <label>Password</label>
+                
+                <input type="password" name="password">
+                <br>
                 <br>
            <hr>
 
-          
+            <input type="checkbox" name="remember">Remember me
+            <br>
 
-            <input type="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
+
+            <a href="forgot.php">Forgot Password?
             
       </fieldset>
+      </form>
+
+     
+
     </main>
+
 
     <footer>
       Copyright &copy; 2017

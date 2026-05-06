@@ -87,30 +87,25 @@
       </nav>
     </header>
     <main>
-      <fieldset>
-        <legend>LOGIN</legend>
-        <label>Name</label>
+      <form action="../controller/forgotcheck.php" method="POST">
+    <fieldset>
+        <legend>FORGOT PASSWORD</legend>
+        <label>Enter Email: </label>
                 
-                <input type="text" name="name">
+                <input type="mail" name="mail">
                 <br>
-                <br>
-                <label>Password</label>
-                
-                <input type="password" name="password">
-                <br>
+               
+              
                 <br>
            <hr>
 
-            <input type="checkbox" name="remember">Remember me
-            <br>
+          
 
-            <input type="submit" value="Submit">
-
-            <a href="forgot.php">Forgot Password?
-
+            <input type="submit" name="submit" value="Submit">
+            
       </fieldset>
+      </form>
     </main>
-
 
     <footer>
       Copyright &copy; 2017
