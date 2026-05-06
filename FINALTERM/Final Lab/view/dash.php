@@ -121,37 +121,14 @@
         <strong>Account</strong>
         <hr>
         <a href="dash.php">Dashboard</a>
-        <a href="profile.php">View Profile</a>
-        <a href="edit.php">Edit Profile</a>
-        <a href="changePP.php">Change Profile Picture</a>
-        <a href="changePass.php">Change Password</a>
+        <a href="update.php">UPDATE</a>
+        <a href="delete.php">DELETE</a>
+        <a href="search.php">SEARCH</a>
         <a href="../controller/logout.php">Logout</a>
       </div>
 
       <div class="content">
-       <fieldset>
-        <legend><h1>Profile</h1></legend>
-        <div style="float: right; font-size: 80px; margin: 10px;">
-      &#128100;  <!-- Code for that logo like thing -->
-
-      <a href="changePP.php" style="font-size: 1rem;">Change</a>
-    </div>
-        Name: <?php echo $_SESSION['user']['name'] ?>
-        <hr>
-        <br>
-        Email: <?php echo $_SESSION['user']['email'] ?>
-        <hr>
-        <br>
-        Gender: <?php echo $_SESSION['user']['gender'] ?>
-        <hr>
-        <br>
-        Date of Birth: <?php echo $_SESSION['user']['day']."/".$_SESSION['user']['month']."/".$_SESSION['user']['year'] ?>
-        <hr>
-        <br>
-
-        <a href="edit.php">Edit Profile</a>
-
-       </fieldset>
+        <h1>Welcome <?php echo $_SESSION['user']['name'] ?>!</h1>
       </div>
 
     </div>
