@@ -1,21 +1,14 @@
 <?php
 
+$con = mysqli_connect(
+    "127.0.0.1",
+    "root",
+    "",
+    "job_portal"
+);
 
-$host ="127.0.0.1";
-$dbname = "jobportal";
-$dbuser = "root";
-$dbpass = "";
-
-
-function getConnection(){
-    global $host;
-    global $dbname;
-    global $dbuser;
-    global $dbpass;
-
-    $con = mysqli_connect($host, $dbuser,$dbpass,$dbname);
-    return $con;
+if(!$con){
+    die("Database Connection Error");
 }
-
 
 ?>
