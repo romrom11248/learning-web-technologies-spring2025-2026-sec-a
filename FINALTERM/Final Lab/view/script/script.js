@@ -1,91 +1,102 @@
 function register(){
 
-    contactno:
-    document.getElementById('contactno').value,
+    let data = {
 
-    username:
-    document.getElementById('username').value,
+        employername:
+        document.getElementById('employername').value,
 
-    password:
-    document.getElementById('password').value
-};
+        companyname:
+        document.getElementById('companyname').value,
 
-let employer = JSON.stringify(data);
+        contactno:
+        document.getElementById('contactno').value,
 
-let xhttp = new XMLHttpRequest();
+        username:
+        document.getElementById('username').value,
 
-xhttp.open(
-    'POST',
-    '../controller/regCheck.php',
-    true
-);
+        password:
+        document.getElementById('password').value
+    };
 
-xhttp.setRequestHeader(
-    'Content-type',
-    'application/x-www-form-urlencoded'
-);
+    let employer = JSON.stringify(data);
 
-xhttp.send('employer='+employer);
+    let xhttp = new XMLHttpRequest();
 
-xhttp.onreadystatechange = function(){
+    xhttp.open(
+        'POST',
+        '../controller/regCheck.php',
+        true
+    );
 
-    if(this.readyState == 4 &&
-       this.status == 200){
+    xhttp.setRequestHeader(
+        'Content-type',
+        'application/x-www-form-urlencoded'
+    );
 
-        let response =
-            JSON.parse(this.responseText);
+    xhttp.send('employer='+employer);
 
-        document.getElementById('regMsg')
-            .innerHTML = response.message;
-    }
-}
-}
+    xhttp.onreadystatechange = function(){
 
+        if(this.readyState == 4 &&
+           this.status == 200){
 
-function login(){
-    username:
-    document.getElementById('loginUsername').value,
+            let response =
+                JSON.parse(this.responseText);
 
-    password:
-    document.getElementById('loginPassword').value
-};
-
-let employer = JSON.stringify(data);
-
-let xhttp = new XMLHttpRequest();
-
-xhttp.open(
-    'POST',
-    '../controller/loginCheck.php',
-    true
-);
-
-xhttp.setRequestHeader(
-    'Content-type',
-    'application/x-www-form-urlencoded'
-);
-
-xhttp.send('employer='+employer);
-
-xhttp.onreadystatechange = function(){
-
-    if(this.readyState == 4 &&
-       this.status == 200){
-
-        let response =
-            JSON.parse(this.responseText);
-
-        document.getElementById('loginMsg')
-            .innerHTML = response.message;
-
-        if(response.status == true){
-
-            window.location =
-                'dashboard.php';
+            document.getElementById('regMsg')
+                .innerHTML = response.message;
         }
     }
 }
+
+function login(){
+
+    let data = {
+
+        username:
+        document.getElementById('loginUsername').value,
+
+        password:
+        document.getElementById('loginPassword').value
+    };
+
+    let employer = JSON.stringify(data);
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.open(
+        'POST',
+        '../controller/loginCheck.php',
+        true
+    );
+
+    xhttp.setRequestHeader(
+        'Content-type',
+        'application/x-www-form-urlencoded'
+    );
+
+    xhttp.send('employer='+employer);
+
+    xhttp.onreadystatechange = function(){
+
+        if(this.readyState == 4 &&
+           this.status == 200){
+
+            let response =
+                JSON.parse(this.responseText);
+
+            document.getElementById('loginMsg')
+                .innerHTML = response.message;
+
+            if(response.status == true){
+
+                window.location =
+                    'dashboard.php';
+            }
+        }
+    }
 }
+
 function loadEmployers(){
 
     let xhttp = new XMLHttpRequest();
@@ -177,7 +188,6 @@ function editEmployer(
     document.getElementById('editPassword')
         .value = password;
 }
-
 
 function updateEmployer(){
 
