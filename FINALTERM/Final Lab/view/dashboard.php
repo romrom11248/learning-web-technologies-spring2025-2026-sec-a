@@ -22,10 +22,7 @@ Welcome
 <?php echo $_SESSION['username']; ?>
 </h3>
 
-<h4>
-Cookie:
-<?php echo $_COOKIE['username']; ?>
-</h4>
+
 
 <a href="../controller/logout.php">
     Logout

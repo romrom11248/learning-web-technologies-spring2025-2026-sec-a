@@ -21,7 +21,7 @@
     }
     else if($password != $confirmpassword){
         echo "Passwords do not match!";}
-        
+
         else{
         $user = ['name'=>$name,'username'=>$username, 'password'=>$password, 'email'=>$email, 
         'confirmpassword'=> $confirmpassword, 'gender'=>$gender, 'day'=> $dob_day, 
@@ -29,7 +29,8 @@
         $_SESSION['user'] =$user;
         header('location: ../view/login.php');
     }
-    }else{
+    }
+    else{
         header('location:../view/reg.php');
     }
 ?>

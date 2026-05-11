@@ -27,7 +27,7 @@ if (!isset($_COOKIE['status'])) {
 
 
 
-    <form method="post" action="../file/upload.php" enctype="multipart/form-data">
+    <form method="post" action="../file/uploadupload.php" enctype="multipart/form-data">
       Image: <input type="file" name="myfile">
       <br><br>
       <input type="submit" name="submit" value="Upload">

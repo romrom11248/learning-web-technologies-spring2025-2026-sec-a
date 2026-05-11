@@ -24,7 +24,7 @@ function register(){
 
     xhttp.open(
         'POST',
-        '../controller/regCheck.php',
+        '../controller/employerController.php?action=register',
         true
     );
 
@@ -66,7 +66,7 @@ function login(){
 
     xhttp.open(
         'POST',
-        '../controller/loginCheck.php',
+        '../controller/employerController.php?action=login',
         true
     );
 
@@ -103,7 +103,7 @@ function loadEmployers(){
 
     xhttp.open(
         'GET',
-        '../controller/getEmployers.php',
+        '../controller/employerController.php?action=getEmployers',
         true
     );
 
@@ -218,7 +218,7 @@ function updateEmployer(){
 
     xhttp.open(
         'POST',
-        '../controller/updateEmployer.php',
+        '../controller/employerController.php?action=update',
         true
     );
 
@@ -245,7 +245,7 @@ function deleteEmployer(id){
 
     xhttp.open(
         'GET',
-        '../controller/deleteEmployer.php?id='+id,
+        '../controller/employerController.php?action=delete&id='+id,
         true
     );
 
@@ -270,7 +270,7 @@ function searchEmployer(){
 
     xhttp.open(
         'GET',
-        '../controller/searchEmployer.php?name='+name,
+        '../controller/employerController.php?action=search&name='+name,
         true
     );
 

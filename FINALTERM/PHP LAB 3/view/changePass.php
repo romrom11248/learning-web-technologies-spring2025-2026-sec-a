@@ -1,18 +1,17 @@
 <?php
-session_start();
-if (!isset($_COOKIE['status'])) {
-  header('location: login.php');
-  exit;
-}
+    session_start();
+    if(!isset($_COOKIE['status'])){
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>xCompany - Dashboard</title>
   <style>
     * {
@@ -103,7 +102,6 @@ if (!isset($_COOKIE['status'])) {
     }
   </style>
 </head>
-
 <body>
 
   <div class="page-wrapper">
@@ -131,64 +129,35 @@ if (!isset($_COOKIE['status'])) {
       </div>
 
       <div class="content">
-        <fieldset>
-          <legend>
-            <h1>Profile</h1>
-          </legend>
-          <?php
-          if (isset($_SESSION['user']['picture'])) {
-            ?>
-
-            <div style="float:right; text-align:center; margin:10px; width:120px;">
-
-              <img src="../<?php echo $_SESSION['user']['picture']; ?>" width="100" height="100"
-                style="display:block; margin:auto;">
-
-              <br>
-
-              <a href="changePP.php" style="font-size:16px;">Change</a>
-
-            </div>
-
-            <?php
-          } else {
-            ?>
-
-            <div style="float:right; text-align:center; margin:10px; width:120px;">
-
-              <div style="font-size:80px;">
-                &#128100;
-              </div>
-
-              <br>
-
-              <a href="changePP.php" style="font-size:16px;">Change</a>
-
-            </div>
-
-            <?php
-          }
-          ?>
+        <form action="../controller/ChangePassCheck.php" method="POST">
+       <fieldset>
+        <legend><h1>Change Password</h1></legend>
+        <label>Current Password: </label>
+                
+                <input type="password" name="current">
+                <br>
+                <br>
+           
 
 
+            <label>New Password: </label>
+            
+                <input type="password" name="new">
+                <br>
+                <br>
+                
+            <label style="color:red;">Retype New Password: </label>
+            
+            <input type="password" name="retype">
+            <br>
+            <br>
+            <hr>
 
-          Name: <?php echo $_SESSION['user']['name'] ?>
-          <hr>
-          <br>
-          Email: <?php echo $_SESSION['user']['email'] ?>
-          <hr>
-          <br>
-          Gender: <?php echo $_SESSION['user']['gender'] ?>
-          <hr>
-          <br>
-          Date of Birth:
-          <?php echo $_SESSION['user']['day'] . "/" . $_SESSION['user']['month'] . "/" . $_SESSION['user']['year'] ?>
-          <hr>
-          <br>
+            <input type="submit" name="submitPass" value="Submit">
+   
 
-          <a href="edit.php">Edit Profile</a>
-
-        </fieldset>
+       </fieldset>
+       </form>
       </div>
 
     </div>
@@ -200,5 +169,4 @@ if (!isset($_COOKIE['status'])) {
   </div>
 
 </body>
-
 </html>
